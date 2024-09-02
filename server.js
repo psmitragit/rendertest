@@ -13,13 +13,6 @@ dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 
-// Configure CORS (Update the origin as needed for production)
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type'],
-}));
-
 app.use(express.json());
 
 const dbConfig = {
